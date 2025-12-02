@@ -1,20 +1,13 @@
 meta {
-  name: Login
+  name: Refresh  Token
   type: http
-  seq: 2
+  seq: 3
 }
 
 post {
-  url: {{base_url}}/auth/login
-  body: json
+  url: {{base_url}}/auth/refresh
+  body: none
   auth: inherit
-}
-
-body:json {
-  {
-    "email": "test@example.com",
-    "password": "password123"
-  }
 }
 
 script:post-response {
