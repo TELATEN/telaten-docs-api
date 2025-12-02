@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Telaten API Docs",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
