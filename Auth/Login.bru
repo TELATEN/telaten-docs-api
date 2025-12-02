@@ -6,13 +6,15 @@ meta {
 
 post {
   url: {{base_url}}/auth/login
-  body: multipartForm
+  body: json
   auth: inherit
 }
 
-body:multipart-form {
-  username: test@example.com
-  password: password123
+body:json {
+  {
+    "email": "test@example.com",
+    "password": "password123"
+  }
 }
 
 settings {
