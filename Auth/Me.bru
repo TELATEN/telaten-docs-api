@@ -1,0 +1,21 @@
+meta {
+  name: Me
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/auth/me
+  body: none
+  auth: inherit
+}
+
+script:post-response {
+  const token = res.body.access_token
+  bru.setEnvVar("access_token",token)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
