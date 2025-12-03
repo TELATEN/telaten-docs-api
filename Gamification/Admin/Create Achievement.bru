@@ -1,0 +1,25 @@
+meta {
+  name: Create Achievement
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/gamification/achievements
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Juragan Baru",
+    "description": "Menyelesaikan 5 milestone pertama.",
+    "required_points": 500,
+    "badge_icon": "https://example.com/badges/juragan-baru.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Update Achievement
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/gamification/achievements
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Juragan Senior",
+    "description": "Deskripsi baru...",
+    "required_points": 1000,
+    "badge_icon": "https://example.com/badges/juragan-senior.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

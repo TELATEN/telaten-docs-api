@@ -1,0 +1,27 @@
+meta {
+  name: Update Milestones
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/milestones/{milestones_id}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Mendaftarkan NIB (Revisi)",
+    "description": "Deskripsi baru yang lebih detail...",
+    "status": "in_progress",
+    "order": 2,
+    "level": 2,
+    "reward_points": 150
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,11 +1,11 @@
 meta {
-  name: Get Milestones
+  name: Start Milestones
   type: http
-  seq: 1
+  seq: 5
 }
 
-get {
-  url: {{base_url}}/milestones
+post {
+  url: {{base_url}}/milestones/{milestone_id}/start
   body: none
   auth: inherit
 }

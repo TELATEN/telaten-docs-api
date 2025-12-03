@@ -1,0 +1,44 @@
+meta {
+  name: Create Milestones
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/milestones
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+    {
+      "title": "Mendaftarkan NIB",
+      "description": "Proses pendaftaran Nomor Induk Berusaha melalui OSS.",
+      "status": "pending",
+      "order": 1,
+      "level": 1,
+      "reward_points": 100,
+      "is_generated": false,
+      "tasks": [
+        {
+          "title": "Siapkan KTP dan NPWP",
+          "is_completed": false,
+          "order": 1,
+          "reward_points": 10
+        },
+        {
+          "title": "Buat akun OSS",
+          "is_completed": false,
+          "order": 2,
+          "reward_points": 10
+        }
+      ]
+    }
+  ]
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
