@@ -1,17 +1,13 @@
 meta {
-  name: Event
+  name: Get Sessions
   type: http
-  seq: 3
+  seq: 1
 }
 
 get {
-  url: {{base_url}}/business/events
+  url: {{base_url}}/chat/sessions/b43aedfa-8eff-417b-8fdd-b21abe719126
   body: none
   auth: inherit
-}
-
-headers {
-  Accept: text/event-stream
 }
 
 settings {

@@ -1,0 +1,23 @@
+meta {
+  name: Completion
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/chat/completion
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "business_id": "b43aedfa-8eff-417b-8fdd-b21abe719126",
+    "content": "halo"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
