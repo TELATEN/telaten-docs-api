@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{base_url}}/finance/summary?period=month&period=week
+  url: {{base_url}}/finance/summary?period=month
   body: none
   auth: inherit
 }
 
 params:query {
   period: month
-  period: week
+  ~period: week
 }
 
 settings {
