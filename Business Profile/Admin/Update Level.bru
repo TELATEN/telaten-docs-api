@@ -1,0 +1,23 @@
+meta {
+  name: Update Level
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/admin/business/levels
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Silver Level",
+    "required_points": 250
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
