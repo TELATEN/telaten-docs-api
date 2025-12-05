@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{base_url}}/milestones
+  url: {{base_url}}/milestones?size=1&page=0
   body: none
   auth: inherit
+}
+
+params:query {
+  size: 1
+  page: 0
 }
 
 settings {

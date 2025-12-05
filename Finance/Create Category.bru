@@ -1,0 +1,35 @@
+meta {
+  name: Create Category
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/finance/categories
+  body: json
+  auth: inherit
+}
+
+body:json {
+  //  Kategori Pengeluaran (Expense)
+  {
+    "name": "Bahan Baku",
+    "type": "EXPENSE",
+    "icon": "shopping-cart",
+    "is_default": false
+  }
+  
+  // Kategori Pemasukan (Income)
+  
+  // {
+  //   "name": "Penjualan Makanan",
+  //   "type": "INCOME",
+  //   "icon": "trending-up",
+  //   "is_default": true
+  // }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
